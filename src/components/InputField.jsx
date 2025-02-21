@@ -1,5 +1,4 @@
 // Поле введення
-
 import React from "react";
 
 const InputField = ({ label, type, name, register, errors, placeholder }) => {
