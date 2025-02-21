@@ -1,42 +1,127 @@
-#root {
-  max-width: 1280px;
+/* Основной контейнер формы */
+form {
+  max-width: 500px;
   margin: 0 auto;
+  background-color: #fff;
   padding: 2rem;
-  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Стиль для меток */
+label {
+  font-size: 1rem;
+  color: #555;
+  font-weight: 600;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Стиль для полей ввода */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1.2rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s ease-in-out;
 }
 
-.card {
-  padding: 2em;
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #4caf50;
+  outline: none;
 }
 
-.read-the-docs {
+/* Стиль для кнопки отправки */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+button[type="submit"]:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+/* Стиль для ошибок */
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
+.error-message::before {
+  content: "❌ ";
+  margin-right: 5px;
+}
+
+/* Стиль для блока с подсказками */
+p {
+  font-size: 0.875rem;
   color: #888;
+}
+
+/* Стиль для радио-кнопок */
+input[type="radio"] {
+  margin-right: 8px;
+}
+
+/* Стиль для SelectField */
+.select__control {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.select__control:hover {
+  border-color: #4caf50;
+}
+
+/* Отступы для компонентов */
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* Контейнер для формы */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Стили для иконок (если они есть в формах) */
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
 }
